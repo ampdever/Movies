@@ -1,0 +1,23 @@
+:root {
+--font-body: cinzel;
+
+    --primary-color: #B22222;
+    --secondary-color: #FFD700;
+    --tertiary-color: #800000;
+
+    --font-offwhite: #F5F5F5;
+    --font-charcoal: #333333;
+    --font-lightgray: #D3D3D3;
+}
+
+.heading {
+    background-color: var(--primary-color);
+}
+
+.maining {
+    background-color: var(--tertiary-color);
+}
+
+.footing {
+    background-color: var(--secondary-color);
+}
