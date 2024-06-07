@@ -5,16 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movies | Aaron M.</title>
     <link rel="stylesheet" href="/styles/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <header class="heading">
-        <p>This is my header</p>
+        <h1>Movies!</h1>
     </header>
     <main class="maining">
-        <p>This is my maining</p>
+        <section class="left-section">
+            <div><h3 style="color: white;">Search By:</h3></div>
+            <a href="name.html"><button>Name</button></a>
+            <button>Genre</button>
+            <button>Top Pick</button>
+        </section>
+        <section class="right-section" id="movie-list">
+            <!-- Movies will show here -->
+        </section>
+        <script src="js/main.js" type="module"></script>
     </main>
     <footer class="footing">
-        <p>This is my footing</p>
+        <p class="copyright"> &copy; 2024 | Aaron M | Movie API</p>
     </footer>
 </body>
 </html>
