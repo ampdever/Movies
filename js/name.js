@@ -10,7 +10,7 @@ async function movieByName() {
 
     try {
         const response = await axios.request(options);
-        const movies = response.data; // Adjust based on actual API response structure
+        const movies = response.data;
 
         if (!movies || movies.length === 0) {
             console.error('No movies found.');
@@ -18,21 +18,21 @@ async function movieByName() {
         }
 
         const resultsList = document.getElementById('results-list');
-        resultsList.innerHTML = ''; // Clear any existing content
+        resultsList.innerHTML = '';
 
         for (const movie of movies) {
             const movieDiv = document.createElement('div');
             movieDiv.classList.add('movie');
 
             const img = document.createElement('img');
-            img.src = movie.poster_path; // Adjust based on actual API response structure
+            img.src = movie.poster_path;
             img.alt = movie.title;
 
             const title = document.createElement('h2');
             title.textContent = movie.title;
 
             const description = document.createElement('p');
-            description.textContent = movie.overview; // Adjust based on actual API response structure
+            description.textContent = movie.overview;
 
             movieDiv.appendChild(img);
             movieDiv.appendChild(title);
@@ -45,7 +45,7 @@ async function movieByName() {
     }
 }
 
-// Event listener for the search form
+
 document.getElementById('search-form').addEventListener('submit', function(event) {
     event.preventDefault();
     const movieName = document.getElementById('movie-name').value;

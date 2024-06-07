@@ -10,7 +10,7 @@ async function fetchMovies() {
 
     try {
         const response = await axios.request(options);
-        const movies = response.data; // Adjust based on actual API response structure
+        const movies = response.data;
 
         if (!movies || movies.length === 0) {
             console.error('No movies found.');
@@ -18,7 +18,7 @@ async function fetchMovies() {
         }
 
         const movieList = document.getElementById('movie-list');
-        movieList.innerHTML = ''; // Clear any existing content
+        movieList.innerHTML = '';
         const shuffledMovies = movies.sort(() => 0.5 - Math.random());
 
         for (let i = 0; i < 3; i++) {
@@ -29,14 +29,14 @@ async function fetchMovies() {
             movieDiv.classList.add('movie');
 
             const img = document.createElement('img');
-            img.src = movie.poster_path; // Adjust based on actual API response structure
+            img.src = movie.poster_path;
             img.alt = movie.title;
 
             const title = document.createElement('h2');
             title.textContent = movie.title;
 
             const description = document.createElement('p');
-            description.textContent = movie.overview; // Adjust based on actual API response structure
+            description.textContent = movie.overview;
 
             movieDiv.appendChild(img);
             movieDiv.appendChild(title);
@@ -49,5 +49,4 @@ async function fetchMovies() {
     }
 }
 
-// Call the fetchMovies function when the page loads
 window.onload = fetchMovies;
